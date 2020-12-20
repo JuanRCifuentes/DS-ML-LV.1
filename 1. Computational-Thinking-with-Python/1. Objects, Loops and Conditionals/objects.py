@@ -26,8 +26,10 @@ print('2**3 = ' + str(2**3))
 # ----- STRINGS -----
 name = "Felix Kjellberg"
 
+print(name)
 print(len(name))
 print(name[2])
+print(name[:5])
 print(name[2:10])
 print(name[::2])
 
