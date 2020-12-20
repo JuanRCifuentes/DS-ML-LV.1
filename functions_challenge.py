@@ -1,6 +1,7 @@
 import datetime
 
-chosen_method = int(input('Choose a method to get the square root (1. Binary Search, 2. Aproximation, 3. Enumeration): '))
+chosen_method = int(input('Choose a method' + \
+    'to get the square root (1. Binary Search, 2. Aproximation, 3. Enumeration): '))
 
 def binary_method():
     goal = int(input('Choose an integer: '))
