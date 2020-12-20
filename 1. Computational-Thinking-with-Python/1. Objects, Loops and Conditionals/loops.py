@@ -1,4 +1,4 @@
-#while
+# ----- While -----
 index = 0
 while index < 10:
     print(index)
@@ -6,19 +6,12 @@ while index < 10:
     if index == 5:
         break
 
-#For
+# ----- For -----
 frutas = ['manzana', 'banano', 'naranja']
 for fruta in frutas:
     print(fruta)
 
-#iter()
-colores = ['azul', 'amarillo', 'rojo']
-iterador = iter(colores)
-print(next(iterador))
-print(next(iterador))
-print(next(iterador))
-
-#Using Dictionaries
+# Using Dictionaries
 estudiantes = {
     'mexico': 10,
     'colombia': 15,
@@ -32,3 +25,10 @@ for numeros in estudiantes.values():
     print(numeros)
 for items in estudiantes.items():
     print(items)
+
+# ----- iter() -----
+colores = ['azul', 'amarillo', 'rojo']
+iterador = iter(colores)
+print(next(iterador))
+print(next(iterador))
+print(next(iterador))
