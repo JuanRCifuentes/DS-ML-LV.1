@@ -3,12 +3,12 @@ import datetime
 goal = int(input('Choose an integer: '))
 time_0 = datetime.datetime.now()
 
-epsilon = 0.01
+epsilon = 0.001
 paso = epsilon**2
 answer = 0.0
 
 while abs(answer**2 - goal) >= epsilon and answer <= goal:
-    #print(abs(answer**2 - goal), answer)
+    print(abs(answer**2 - goal), answer)
     answer += paso
 
 time_1 = datetime.datetime.now()
