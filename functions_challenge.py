@@ -73,3 +73,4 @@ elif chosen_method == 3:
     enum_method()
 else:
     print('You must write a number between 1 and 3.')
+    
