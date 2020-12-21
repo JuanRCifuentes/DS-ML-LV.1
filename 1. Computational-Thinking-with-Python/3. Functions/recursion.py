@@ -16,7 +16,7 @@ def fibonacci(n):
     """
     Calculate fibonacci's n'th number
 
-    n int >= 0
+    n int >= 0 (Recursion limit is usually 1000)
     return the fibonacci's n'th number
     """
     if n == 1 or n == 0:
