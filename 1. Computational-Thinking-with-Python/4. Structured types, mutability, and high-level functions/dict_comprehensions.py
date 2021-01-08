@@ -23,7 +23,8 @@ dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 dict1_keysfun = {k:k*2 for k in dict1.keys()}
 print(dict1_keysfun)
 
-#Interesting Comprehension applications
+#Interesting Comprehension applications 
+# https://www.datacamp.com/community/tutorials/python-dictionary-comprehension
 
 #-----Replacing certain loops-----
 numbers = range(10)
