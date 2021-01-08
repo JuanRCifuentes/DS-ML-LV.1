@@ -6,6 +6,7 @@ my_dictionary = {
 
 print(my_dictionary['David'])
 
+#Get
 print(my_dictionary.get('Juan', 'Juan not found')) #Looks for Juan, and if that key doesn't exist, returns 'Juan not found'
 print(my_dictionary.get('Jaime', 30))
 
@@ -36,3 +37,4 @@ for llave, valor in my_dictionary.items():
 
 #A key exists ?
 print('Tom' in my_dictionary)
+print('David' in my_dictionary)
