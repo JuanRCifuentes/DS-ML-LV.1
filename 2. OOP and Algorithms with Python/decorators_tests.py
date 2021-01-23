@@ -13,7 +13,7 @@ class Decorador_Class(object):
         self.function_1 = function_1
     
     def __call__(self, *Args, **Kwargs):
-        print(f'Ejecutando mi clase decoradora con la funcion {self.function_1.__name__}')
+        print(f'Ejecutando mi clase decoradora con la funcion {self.function_1.__name__} {Args[0]}')
         self.function_1(*Args, **Kwargs)
 
 # @timer
