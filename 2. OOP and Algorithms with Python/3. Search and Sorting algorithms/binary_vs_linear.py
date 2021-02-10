@@ -19,4 +19,4 @@ if __name__ == '__main__':
     print('BINARY SEARCH:')
     (found, iter_bin) = binary_search.binary_search(list, 0, len(list)-1, goal)
     print(f'It took {iter_bin} iterations')
-    print(f'The goal element {goal} {"is" if found else "isn" + sq + "t"} in the list')
+    print(f'The goal element {goal} {"is" if found else "is not"} in the list')
