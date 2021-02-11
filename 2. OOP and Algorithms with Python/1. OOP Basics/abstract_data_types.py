@@ -19,3 +19,4 @@ if(__name__) == '__main__':
     print(coord_1.distance(coord_2))
     print(isinstance(coord_2, Coordenada))
     print(isinstance(n, Coordenada))
+    print(isinstance(n, int))
