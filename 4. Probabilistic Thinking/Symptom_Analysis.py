@@ -2,8 +2,6 @@
 def calc_bayes(prior_A,prob_B_dado_A, prob_B):
     return (prior_A*prob_B_dado_A) / prob_B
 
-
-
 if __name__ == '__main__':
     prob_cancer = 1 / 100000
     prob_symptom_given_cancer = 1

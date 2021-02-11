@@ -1,32 +1,32 @@
 from varname import nameof
 
-# def decorator_function(funct):
-#     def wrapper():
-#         print('This is the last message')
-#         funct()
-#         print('This is the first message')
-#     return wrapper
+def decorator_function(funct):
+    def wrapper():
+        print('This is the last message')
+        funct()
+        print('This is the first message')
+    return wrapper
 
-# def buzz1():
-#     print('Buzzz')
+def buzz1():
+    print('Buzzz')
 
-# buzz = decorator_function(buzz1)
+buzz = decorator_function(buzz1)
 
-# buzz()
+buzz()
 
-# #-----With better sintaxis-----
-# def decorator_function2(funct):
-#     def wrapper():
-#         print('This is the last message')
-#         funct()
-#         print('This is the first message')
-#     return wrapper
+#-----With better sintaxis-----
+def decorator_function2(funct):
+    def wrapper():
+        print('This is the last message')
+        funct()
+        print('This is the first message')
+    return wrapper
 
-# @decorator_function2
-# def buzz2():
-#     print('Buzzz')
+@decorator_function2
+def buzz2():
+    print('Buzzz')
 
-# buzz()
+buzz()
 
 #-----Understanding decorators-----
 def deco(funct):
