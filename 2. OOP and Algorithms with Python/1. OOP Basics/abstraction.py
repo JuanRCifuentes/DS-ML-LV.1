@@ -1,6 +1,8 @@
 class WashingMachine:
 
     def __init__(self):
+        self._marca = "Samsung"
+        self.__modelo = "Uno"
         pass
 
     def wash(self, temperature='caliente'):
@@ -24,3 +26,6 @@ class WashingMachine:
 if __name__ == '__main__':
     lavadora = WashingMachine()
     lavadora.wash()
+    print(lavadora._marca)
+    # print(lavadora.__modelo)
+    print(lavadora._WashingMachine__modelo)
