@@ -9,11 +9,11 @@
 !.vscode/extensions.json
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/vscode
-
-
-# Created by https://www.toptal.com/developers/gitignore/api/macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
 ### macOS ###
 # General
@@ -43,5 +43,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-# End of https://www.toptal.com/developers/gitignore/api/macos
