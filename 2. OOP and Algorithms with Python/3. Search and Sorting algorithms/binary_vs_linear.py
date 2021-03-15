@@ -1,5 +1,5 @@
-import linear_search
-import binary_search
+import linear_search # type: ignore
+import binary_search # type: ignore
 import random
 
 if __name__ == '__main__':
