@@ -38,6 +38,7 @@ def test_method(method):
 
 def test_all_methods(list_size):
 
+    #To use list, it MUST be copied into each method, because those methods modify the list, so the second method would receive an already sorted list if not a copy
     list = generate_list(list_size)
 
     print("- " * 55)
