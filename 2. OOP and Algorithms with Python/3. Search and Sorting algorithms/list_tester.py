@@ -12,41 +12,25 @@ def timer(funct):
     return wrapper_function
 
 @timer
-def test_small_list(method, list):
-    sorted_list = method(list)
-    print(f"Sorted list (with {method.__name__}): ")
-    print(sorted_list)
-
-def generate_small_list():
-    list_size = int(input('Write the desired list size: '))
-
-    list = [random.randint(0,list_size) for i in range(list_size)]
-    print("Original List: ")
-    print(list)
-
-    return list
-
-@timer
 def test_list(method, list):
     sorted_list = method(list)
-    print(f"Sorted list (with {method.__name__}): ")
-
-def generate_small_list():
-    list_size = int(input('Write the desired list size: '))
-
-    list = [random.randint(0,list_size) for i in range(list_size)]
-    print("Original List: ")
-    print(list)
-
-    return list
+    print(method.__name__)
+    if len(list) < 50:
+        print(f"Sorted list: ")
+        print(sorted_list)
 
 def generate_list(list_size):
     list = [random.randint(0,list_size) for i in range(list_size)]
 
+    if len(list) < 50:
+        print("Original List: ")
+        print(list)
+
     return list
 
 def test_method(method):
-    list = generate_list()
+    list_size = int(input('Write the desired list size: '))
+    list = generate_list(list_size)
 
     test_list(method, list)
 
