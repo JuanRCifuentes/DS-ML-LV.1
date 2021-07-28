@@ -131,7 +131,7 @@ cat FILE_NAME.EXTENSION
 
 ## Git Stages
 <p align="center">
-  <img src="Images/GIT_stages.png" alt="drawing" width="200"/>
+  <img src="Images/GIT_stages.png" alt="drawing" width="300"/>
 </p>
 
 ## Git Commands
@@ -143,18 +143,22 @@ git init
 ```
 It creates a hidden folder called `.git`, you can check that with the comand `ls -al`
 
-### Status
+### Check repository status
 ```bash
 git status
 ```
 It shows if there are files staged or in the working directory. With this command, changes yet commited are listed.
 
 ### Add and Commit
-```
+The `add` command is used to stage changes made in working directory
+```bash
 git add FILE_NAME       # Sends a specific change to the staging area
 git add -all            # Stages all changes in a folder
-
+```
+The `commit` command, is used to 'confirm' changes already staged. It is a good practice to include a message with every commit, explaining the changes made.
+```bash
 git commit -m "MESSAGE" # Commits every staged change with a message
+git commit --amend      # Changes current commit message
 ```
 
 ## VCS
