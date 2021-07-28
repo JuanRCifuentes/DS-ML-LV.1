@@ -153,6 +153,21 @@ git status
 ```
 It shows if there are files staged or in the working directory. With this command, changes yet commited are listed.
 
+- No changes (or all changes commited)
+<p align="center">
+  <img src="Images/status_commited.png" alt="drawing" width="450"/>
+</p>
+
+- Changes in working directory
+<p align="center">
+  <img src="Images/status_wd.png" alt="drawing" width="450"/>
+</p>
+
+- Changes staged
+<p align="center">
+  <img src="Images/status_staged.png" alt="drawing" width="450"/>
+</p>
+
 ### Add, rm and Commit
 The `add` command is used to stage changes made in working directory
 ```bash
