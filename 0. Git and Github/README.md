@@ -24,7 +24,22 @@ Git is a [VCS](#vcs), usually used for coordinating work among programmers.
 
 ## Installation
 
+
+### macOS
+There are multiple options to install Git on a mac:
+1. Download Git from [Official Git website](https://git-scm.com) and execute the installer.
+2. **Using [homebrew](https://www.youtube.com/watch?v=1uvr9-zUB3w):** Type  `$ brew install git` in terminal.
+3. **Using Xcode package:** When executing git from the terminal for the first time, it will ask you if you want to install it.
+
+Then, you can check for the Git installation in terminal typing:
+
+`git --version`
+
+### Linux
+
 ### Windows
+Windows does not have a proper terminal for programming commands, so it needs to configure a lot or additional things such as a Bash terminal and security protocols.
+
 1. Download Git from [Official Git website](https://git-scm.com)
 2. Execute installer
 3. **Components:**
@@ -42,10 +57,6 @@ Git is a [VCS](#vcs), usually used for coordinating work among programmers.
 12. **Symbolic links:** Enable (Shortcuts but on Linux and macOS)
 13. **System caching:** Enable (for Git to run faster)
 14. **Experimental support:** No if not sure about it
-
-### macOS
-
-### Linux
 
 ### Additional Configurations
 
