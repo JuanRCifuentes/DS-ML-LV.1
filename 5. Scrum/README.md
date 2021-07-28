@@ -8,7 +8,7 @@
     - [backlog](#backlog)
   - [Workflow](#workflow)
     - [Sprints](#sprints)
-  ## [References](#references)
+  - [References](#references)
 
 ## Definition
 Scrum is a framework utilizing an agile mindset for developing, delivering and sustaining productsin a complex enviroment, with an initial emphasis on software development, although it has been used in other fields including research, sales, marketing and advanced technologies [2]. Scrum uses roles, goals and workflows.
