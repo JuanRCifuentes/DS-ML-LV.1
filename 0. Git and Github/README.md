@@ -44,6 +44,7 @@
   - [Issues and Pull-Request](#issues-and-pull-request)
   - [Other commands](#other-commands)
     - [Deleting a tag on remote repo](#deleting-a-tag-on-remote-repo)
+- [References](#references)
 
 # Git
 
@@ -154,7 +155,7 @@ cat FILE_NAME.EXTENSION
 
 ## Git Stages
 <p align="center">
-  <img src="Images/GIT_stages.png" alt="drawing" width="300"/>
+  <img src="Images/GIT_stages.png" alt="drawing" width="400"/>
 </p>
 
 ## Git Commands
@@ -289,3 +290,8 @@ git superlog            # An alias we previously created in "Useful Configuratio
 ```bash
 git push -delete origin TAG_NAME
 ```
+
+# References
+1. Platzi 
+2. Wikipedia
+3. Git Book [Link](https://git-scm.com/book/en)
