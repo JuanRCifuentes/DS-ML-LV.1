@@ -208,7 +208,29 @@ git log -5 --graph      # Parameters can be nested
 git superlog            # An alias we previously created in "Useful Configurations" section
 ```
 
-## VCS
+### Git Tags
+
+### Git Diff
+
+### Git Reset
+
+### Git Checkout
+
+## Branching
+
+### Git Merge
+
+## Advanced Git Commands
+
+### Stash
+
+### Rebase
+
+### Cherry Pick
+
+## Git-Ignore
+
+## What is a VCS?
 
 ### Local
 
@@ -228,4 +250,23 @@ git superlog            # An alias we previously created in "Useful Configuratio
   <img src="Images/VCS_distributed.png" alt="drawing" width="300"/>
 </p>
 
-# Github
+# GitHub
+
+## Remote Repositories
+
+## Generating a key
+
+## Push
+
+### Force push
+
+## Fetch and Pull
+
+## Issues and Pull-Request
+
+## Other commands
+
+### Deleting a tag on remote repo
+```bash
+git push -delete origin TAG_NAME
+```
