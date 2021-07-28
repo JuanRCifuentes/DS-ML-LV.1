@@ -14,6 +14,8 @@
     - [Additional Configurations](#additional-configurations)
     - [Useful Configurations](#useful-configurations)
   - [Terminal commands](#terminal-commands)
+  - [Git Stages](#git-stages)
+  - [Git Commands](#git-commands)
   - [VCS](#vcs)
     - [Local](#local)
     - [Centralized](#centralized)
@@ -65,25 +67,25 @@ Windows does not have a proper programming environment, so it needs to configure
 14. **Experimental support:** No if not sure about it
 
 ### Additional Configurations
-1. **Setup username:** In terminal type
+1. **Setup username:**
 ```bash
 git config --global user.name "USERNAME"
 ```
-2. **Setup email:** In terminal type
+2. **Setup email:**
 ```bash
 git config --global user.email "EMAIL@DOMAIN.COM"
 ```
 
 ### Useful Configurations
-- Set colorUI as true for colored visualization. In terminal type:
+- Set colorUI as true for colored visualization.
 ```bash
 git config --global color.ui true
 ```
-- Setup an [alias](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) (**superlog**) for an easier and shorter log read. In terminal type:
+- Setup an [alias](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) (**superlog**) for an easier and shorter log read.
 ```bash
 git config --global alias.superlog "log --graph --abbrev-commit --date=relative --all --format=format:'%C(bold blue)%h%C(reset) %C(auto,magenta)%G? %C(bold green)(%>(18,trunc)%aD)%C(reset) %C(bold blue)[%<(10,trunc)%aN]%Creset - %s%C(reset) %C(bold yellow)%d%C(reset)'"
 ```
-- Set the default text editor for global or local (replacing `global` with `local`) use. Replace `code` with `atom` to use Atom, `subl` to use Sublime Text, etc. Type in terminal:
+- Set the default text editor for global or local (replacing `global` with `local`) use. Replace `code` with `atom` to use Atom, `subl` to use Sublime Text, etc.
 ```bash
 git config --global core.editor “code —wait”
 ```
@@ -125,6 +127,34 @@ rm -rf FOLDER_NAME
 - View file content
 ```bash
 cat FILE_NAME.EXTENSION
+```
+
+## Git Stages
+<p align="center">
+  <img src="Images/GIT_stages.png" alt="drawing" width="200"/>
+</p>
+
+## Git Commands
+
+### Create a Git repository
+To create a git repository, while located in the proyect folder, type
+```bash
+git init
+```
+It creates a hidden folder called `.git`, you can check that with the comand `ls -al`
+
+### Status
+```bash
+git status
+```
+It shows if there are files staged or in the working directory. With this command, changes yet commited are listed.
+
+### Add and Commit
+```
+git add FILE_NAME       # Sends a specific change to the staging area
+git add -all            # Stages all changes in a folder
+
+git commit -m "MESSAGE" # Commits every staged change with a message
 ```
 
 ## VCS
