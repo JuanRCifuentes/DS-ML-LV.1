@@ -14,14 +14,15 @@
     - [Additional Configurations](#additional-configurations)
     - [Useful Configurations](#useful-configurations)
   - [Terminal commands](#terminal-commands)
+    - [VIM](#vim)
   - [Git Stages](#git-stages)
   - [Git Commands](#git-commands)
     - [Create a Git repository](#create-a-git-repository)
     - [Check Status](#check-status)
-    - [Add, Restore and Commit](#add-restore-and-commit)
+    - [Add, Restore, rm and Commit](#add-restore-rm-and-commit)
     - [Git Log](#git-log)
     - [Git Tags](#git-tags)
-    - [Git Diff](#git-diff)
+    - [Git Show and Diff](#git-show-and-diff)
     - [Git Reset](#git-reset)
     - [Git Checkout](#git-checkout)
   - [Branching](#branching)
@@ -153,7 +154,16 @@ rm -rf FOLDER_NAME
 cat FILE_NAME.EXTENSION
 ```
 
+### VIM
+- If it starts with `#`, it is a comment
+- To quit, esc + shift + z + z (CMD and Terminal course :D)
+
 ## Git Stages
+0. Untracked: Files added to a folder but not added
+1. Working directory
+2. Staging: Space in RAM (memory), temporal place for changes.
+3. Repository: Final storage where commits go.
+
 <p align="center">
   <img src="Images/GIT_stages.png" alt="drawing" width="400"/>
 </p>
@@ -188,7 +198,7 @@ It shows if there are files staged or in the working directory. With this comman
   <img src="Images/status_staged.png" alt="drawing" width="450"/>
 </p>
 
-### Add, Restore and Commit
+### Add, Restore, rm and Commit
 The `add` command is used to stage changes made in working directory
 ```bash
 git add FILE_NAME       # Sends a specific change to the staging area
@@ -199,6 +209,12 @@ The `restore` command removes changes from the staging area or working directory
 ```bash
 git restore --staged FILENAME.py  # Removes FILENAME.py changes from the staging area
 git restore FILENAME.py           # Removes FILENAME.py chenges from working directory
+```
+
+`rm` allows us to eliminate a file but without eliminating it's story in the repo. This is useful if later we want to get the file again.
+```bash
+git rm --cached   # Eliminates files from staging area but not working directory
+git rm --force    # Eliminates files from staging area AND working directory
 ```
 
 The `commit` command, is used to 'confirm' all changes already staged. It is a good practice to include a message with every commit, explaining the changes made.
@@ -224,21 +240,77 @@ git log
 git log --oneline       # Summary the whole commit in one line each
 git log -5              # Limit the number of commits you want to see
 git log -5 --graph      # Parameters can be nested
+git log FILE_NAME       # Shows the commints in which the file was changed
 
 git superlog            # An alias we previously created in "Useful Configurations" section
 ```
 
 ### Git Tags
+Tags can point to a specific point in a repository's history. It is typically used to mark release points (`v1.0`, `v2.0`, etc.).
 
-### Git Diff
+There are two types of tags:
+1. **Lightweight:** Just a pointer to a specific commit
+2. **Annotated:** It is checksummed (has a unique SHA). Carries other data, such as a message, tagger name, tagger email and date; and can be signed and verified with [GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard).
+```bash
+git tag TAG                 # TAG the current commit
+git tag -a TAG              # Makes an annotated tag
+git tag -a TAG -m "MESSAGE" # Creates TAG with a message
+git tag TAG COMMIT_SHA      # Place TAG in a specifit commit
+
+git tag -d TAG              # Deletes TAG
+
+git tag --list              # Lists all tags
+git tag -l                  # Same as above
+git tag -l "v1.8*"          # Lists all tags containing "v1.8"
+```
+
+### Git Show and Diff
+The `show` command generates a `diff` command between the last commit and the one before that. To use `diff`, we have to compare 2 different commits, using their SHA identifiers.
+
+```bash
+git show FILE_NAME
+
+git diff SHA_1 SHA_2
+```
 
 ### Git Reset
+This allows us to go back to a specified version. It can be:
+- **HARD:** Everything goes back
+- **SOFT:** We go back to an earlier verison, except for the staging area
+```bash
+git reset --hard SHA
+git reset --soft SHA
+git reset HEAD        #Eliminates files from staging but keeps them in working directory
+```
 
 ### Git Checkout
+The command `checkout` is used to place the computer in a version from the repository
+```bash
+git checkout SHA    # Places the computer in the commit associated with the given SHA
+git checkout BRANCH # Changes the branch of working directory
+git checkout SHA FILENAME   # Reverts a file to how it was in the specified commit. 
+                            # It becomes a change in working directory.
+git checkout BRANCH FILENAME  # It takes a file to how it is in another branch
+```
 
 ## Branching
+A branch represents an independent line of development. New commits are recorded in the history for the current branch, which recults un a fork in the history of the proyect.
+
+```bash
+git branch                # Lists all branches in repo
+git branch BRANCH_NAME    # Creates a new branch called BRANCH_NAME
+git branch -d BRANCH      # Deletes the specified branch
+git branch -D BRANCH      # Forse deletes a branch. Permanently throws away all commits associated with a branch
+git push origin --delete BRANCH   # Deletes a remote branch. If we just delete, a remote repo may still have the locally deleted branch.
+git branch -m BRANCH1     # Renames the current branch
+git branch -a             # List all remote branches
+```
 
 ### Git Merge
+It is used to combine branches, usually with the master branch
+```bash
+git merge 
+```
 
 ## Advanced Git Commands
 
@@ -251,6 +323,7 @@ git superlog            # An alias we previously created in "Useful Configuratio
 ## Git-Ignore
 
 ## What is a VCS?
+This is explained in the [Git Book](https://git-scm.com/book/en), section "1.1 About Version Control" (pag. 8)
 
 ### Local
 
