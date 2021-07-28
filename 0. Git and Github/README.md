@@ -1,3 +1,5 @@
+<h1 align="center">Git and GitHub</h1>
+
 <p align="center">
   <img src="Images/Git + GitHub.png" alt="drawing" width="100%"/>
 </p>
@@ -11,6 +13,7 @@
     - [Linux](#linux)
     - [Additional Configurations](#additional-configurations)
     - [Useful Configurations](#useful-configurations)
+  - [Terminal commands](#terminal-commands)
   - [VCS](#vcs)
     - [Local](#local)
     - [Centralized](#centralized)
@@ -20,7 +23,7 @@
 # Git
 
 ## Definition
-Git is a [VCS](#vcs), usually used for coordinating work among programmers.
+Git is a [VCS](#vcs), usually used for coordinating work among programmers. Can be used with plain text, as well as binary files, but binary files may not be fully supported.
 
 ## Installation
 You can check for the Git installation in terminal (or Git Bash in windows) typing:
@@ -62,11 +65,11 @@ Windows does not have a proper programming environment, so it needs to configure
 14. **Experimental support:** No if not sure about it
 
 ### Additional Configurations
-1. Setup username: In terminal type
+1. **Setup username:** In terminal type
 ```bash
 git config --global user.name "USERNAME"
 ```
-2. Setup email: In terminal type
+2. **Setup email:** In terminal type
 ```bash
 git config --global user.email "EMAIL@DOMAIN.COM"
 ```
@@ -83,6 +86,45 @@ git config --global alias.superlog "log --graph --abbrev-commit --date=relative 
 - Set the default text editor for global or local (replacing `global` with `local`) use. Replace `code` with `atom` to use Atom, `subl` to use Sublime Text, etc. Type in terminal:
 ```bash
 git config --global core.editor “code —wait”
+```
+## Terminal commands
+- Print working directory: It is used to find out where we currently are
+```bash
+pwd
+```
+- Change directory: It is used to change the current working directory (`~` stands for the user account's home folder)
+- To exit a directory, use dots after `cd`
+```bash
+cd ~/documents/git/proyectX/
+cd ..
+```
+- In macOS you can crag and drop a folder to the terminal to copy it's path
+
+- List of items in directory (`-a` to see even hidden files, `-l` to see as a list)
+```bash
+ls -a
+ls -l
+```
+- Make directory: Creates a folder un the current working directory
+```bash
+mkdir NEW_DIRECTORY_NAME
+```
+- Clear: Cleans the terminal but doesn't delete any commands given
+```bash
+clear
+```
+- Create files
+```bash
+touch FILE_NAME.EXTENSION
+```
+- Remove: It deletes a file or a folder
+```bash
+rm FILE_NAME.EXTENSION
+rm -rf FOLDER_NAME
+```
+- View file content
+```bash
+cat FILE_NAME.EXTENSION
 ```
 
 ## VCS
