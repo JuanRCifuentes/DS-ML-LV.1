@@ -8,14 +8,18 @@
 - [Git](#git)
   - [Definition](#definition)
   - [Installation](#installation)
-    - [Windows](#windows)
     - [macOS](#macos)
     - [Linux](#linux)
+    - [Windows](#windows)
     - [Additional Configurations](#additional-configurations)
     - [Useful Configurations](#useful-configurations)
   - [Terminal commands](#terminal-commands)
   - [Git Stages](#git-stages)
   - [Git Commands](#git-commands)
+    - [Create a Git repository](#create-a-git-repository)
+    - [Check Status](#check-status)
+    - [Add, rm and Commit](#add-rm-and-commit)
+    - [Git Log](#git-log)
   - [VCS](#vcs)
     - [Local](#local)
     - [Centralized](#centralized)
@@ -143,22 +147,49 @@ git init
 ```
 It creates a hidden folder called `.git`, you can check that with the comand `ls -al`
 
-### Check repository status
+### Check Status
 ```bash
 git status
 ```
 It shows if there are files staged or in the working directory. With this command, changes yet commited are listed.
 
-### Add and Commit
+### Add, rm and Commit
 The `add` command is used to stage changes made in working directory
 ```bash
 git add FILE_NAME       # Sends a specific change to the staging area
 git add -all            # Stages all changes in a folder
 ```
-The `commit` command, is used to 'confirm' changes already staged. It is a good practice to include a message with every commit, explaining the changes made.
+
+The `rm` command removes changes from the staging area
+```bash
+git rm --cached FILENAME    # Removes all changes from the staging area
+```
+
+The `commit` command, is used to 'confirm' all changes already staged. It is a good practice to include a message with every commit, explaining the changes made.
 ```bash
 git commit -m "MESSAGE" # Commits every staged change with a message
 git commit --amend      # Changes current commit message
+```
+
+### Git Log
+The `log` command, shows the commits made with some useful information such as:
+1. [SHA](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection): Unique identifier, sequence or numbers and letters
+2. Author of the commit
+3. Date (including time)
+4. Commit description message
+
+<p align="center">
+  <img src="Images/git log.png" alt="drawing" width="400"/>
+</p>
+
+To use it, there are multiple posible parameters as shown below:
+```bash
+git log
+git log --oneline       # Summary the whole commit in one line each
+git log -5              # Limit the number of commits you want to see
+git log -5 --graph      # Parameters can be nested
+
+git superlog            # An alias we previously created in "Useful Configurations" section
 ```
 
 ## VCS
