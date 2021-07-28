@@ -11,7 +11,10 @@ Uninstall with "pip uninstall -r requirements.txt -y" (The "-y" is to uninstall 
 "requirements.txt" was created using "pip freeze > requirements.txt"
 
 Based in [Platzi](https://platzi.com/r/juanrcifuentes/) courses by:
-- David Aroesti
-- Leonidas Esteban
+- David Aroesti:
+- Leonidas Esteban:
+  - Git y Github (2017)
+- Freddy Vega:
+  - Git y Github
 
 Inspired by [Karl Behrens](https://github.com/karlbehrensg)
