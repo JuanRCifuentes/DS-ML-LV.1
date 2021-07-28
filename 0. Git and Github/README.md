@@ -76,7 +76,7 @@ git config --global user.email "EMAIL@DOMAIN.COM"
 ```bash
 git config --global color.ui true
 ```
-- Setup an alias (**superlog**) for an easier and shorter log read. In terminal type:
+- Setup an [alias](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) (**superlog**) for an easier and shorter log read. In terminal type:
 ```bash
 git config --global alias.superlog "log --graph --abbrev-commit --date=relative --all --format=format:'%C(bold blue)%h%C(reset) %C(auto,magenta)%G? %C(bold green)(%>(18,trunc)%aD)%C(reset) %C(bold blue)[%<(10,trunc)%aN]%Creset - %s%C(reset) %C(bold yellow)%d%C(reset)'"
 ```
