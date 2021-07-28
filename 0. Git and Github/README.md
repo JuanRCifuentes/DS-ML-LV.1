@@ -286,8 +286,8 @@ git reset HEAD        #Eliminates files from staging but keeps them in working d
 ### Git Checkout
 The command `checkout` is used to place the computer in a version from the repository
 ```bash
-git checkout SHA    # Places the computer in the commit associated with the given SHA
-git checkout BRANCH # Changes the branch of working directory
+git checkout SHA            # Places the computer in the commit associated with the given SHA
+git checkout BRANCH         # Changes the branch of working directory
 git checkout SHA FILENAME   # Reverts a file to how it was in the specified commit. 
                             # It becomes a change in working directory.
 git checkout BRANCH FILENAME  # It takes a file to how it is in another branch
