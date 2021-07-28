@@ -4,7 +4,6 @@ if __name__ == "__main__":
     output_file("simple_graphing.html")
     fig = figure()
 
-
     total_vals = int(input('How many values you want to graph?: '))
     x_vals = list(range(-total_vals, total_vals+1))
     y_vals = []
