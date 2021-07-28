@@ -18,7 +18,7 @@
   - [Git Commands](#git-commands)
     - [Create a Git repository](#create-a-git-repository)
     - [Check Status](#check-status)
-    - [Add, rm and Commit](#add-rm-and-commit)
+    - [Add, restore and Commit](#add-restore-and-commit)
     - [Git Log](#git-log)
   - [VCS](#vcs)
     - [Local](#local)
@@ -168,16 +168,17 @@ It shows if there are files staged or in the working directory. With this comman
   <img src="Images/status_staged.png" alt="drawing" width="450"/>
 </p>
 
-### Add, rm and Commit
+### Add, Restore and Commit
 The `add` command is used to stage changes made in working directory
 ```bash
 git add FILE_NAME       # Sends a specific change to the staging area
 git add -all            # Stages all changes in a folder
 ```
 
-The `rm` command removes changes from the staging area
+The `restore` command removes changes from the staging area or working directory
 ```bash
-git rm --cached FILENAME    # Removes all changes from the staging area
+git restore --staged FILENAME.py  # Removes FILENAME.py changes from the staging area
+git restore FILENAME.py           # Removes FILENAME.py chenges from working directory
 ```
 
 The `commit` command, is used to 'confirm' all changes already staged. It is a good practice to include a message with every commit, explaining the changes made.
