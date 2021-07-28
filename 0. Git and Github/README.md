@@ -25,7 +25,9 @@ Git is a [VCS](#vcs), usually used for coordinating work among programmers.
 ## Installation
 You can check for the Git installation in terminal (or Git Bash in windows) typing:
 
-`git --version`
+```bash
+git --version
+```
 
 ### macOS
 There are multiple options to install Git on a mac:
@@ -60,8 +62,28 @@ Windows does not have a proper programming environment, so it needs to configure
 14. **Experimental support:** No if not sure about it
 
 ### Additional Configurations
+1. Setup username: In terminal type
+```bash
+git config --global user.name "USERNAME"
+```
+2. Setup email: In terminal type
+```bash
+git config --global user.email "EMAIL@DOMAIN.COM"
+```
 
 ### Useful Configurations
+- Set colorUI as true for colored visualization. In terminal type:
+```bash
+git config --global color.ui true
+```
+- Setup an alias (**superlog**) for an easier and shorter log read. In terminal type:
+```bash
+git config --global alias.superlog "log --graph --abbrev-commit --date=relative --all --format=format:'%C(bold blue)%h%C(reset) %C(auto,magenta)%G? %C(bold green)(%>(18,trunc)%aD)%C(reset) %C(bold blue)[%<(10,trunc)%aN]%Creset - %s%C(reset) %C(bold yellow)%d%C(reset)'"
+```
+- Set the default text editor for global or local (replacing `global` with `local`) use. Replace `code` with `atom` to use Atom, `subl` to use Sublime Text, etc. Type in terminal:
+```bash
+git config --global core.editor “code —wait”
+```
 
 ## VCS
 
