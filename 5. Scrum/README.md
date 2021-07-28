@@ -15,8 +15,11 @@ Scrum is a framework utilizing an agile mindset for developing, delivering and s
 
 ### Additional definitions
 - **Framework:**
+ Provide guidelines but it doesn't make you work one specific way 
 - **Metodology:**
+Group of rules
 - **Agile metodology:**
+Fexible metodolgy
 
 ## Roles
 There are three roles in SCRUM:
@@ -26,12 +29,15 @@ There are three roles in SCRUM:
 
 ## Goals
 
-### backlog
-
-## Workflow
-
-### Sprints
+- **backlog:**
+Tasks you can choose to do them
+- **Workflow:**
+Functions (tasks) you choose from backlog
+- **Sprints:**
+They are the functions divided to be fastest doing it in a certain time
+- **Daily Scrum:**
+It's a daily meet with Scrum master and the team being able to solve team's problems and know what they have done.
 
 ## References
 1. [EDteam - ¿Que es Scrum?](https://www.youtube.com/watch?v=sLexw-z13Fo)
-2. [Wikipedia - Scrum  (software development)](https://en.wikipedia.org/wiki/Scrum_(software_development))
+2. [Wikipedia - Scrum  (software development)](https://en.wikipedia.org/wiki/Scrum_(software_development)
