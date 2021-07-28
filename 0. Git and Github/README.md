@@ -1,4 +1,6 @@
-<h1>Git y Github</h1>
+<p align="center">
+  <img src="Images/Git + GitHub.png" alt="drawing" width="100%"/>
+</p>
 
 ## Table of Contents
 - [Git](#git)
