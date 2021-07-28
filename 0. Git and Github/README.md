@@ -26,13 +26,19 @@ Git is a VCS, usually used for coordinating work among programmers.
 
 ### Local
 
-<object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="http://yoursite.com/the.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<div style="text-align:center">
+  <img src="Images/VCS_local.png" alt="drawing" width="160"/>
+</div>
 
 ### Centralized
 
+<div style="text-align:center">
+  <img src="Images/VCS_centralized.png" alt="drawing" width="200"/>
+</div>
+
 ### Distributed
+
+<div style="text-align:center">
+  <img src="Images/VCS_distributed.png" alt="drawing" width="300"/>
+</div>
 
