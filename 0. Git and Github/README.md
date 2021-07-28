@@ -4,7 +4,8 @@
 - [Definition](#definiton)
 - Git
   - Installation
-  - [Kinds of VCS](#kinds_of_vcs)
+    - Useful configurations
+  - [VCS](#VCS)
     - Local
     - Centralized
     - Distributed
@@ -18,15 +19,13 @@
 
 
 ## Definition
-Git is a VCS, usually used for coordinating work among programmers.
+Git is a [VCS](#VCS), usually used for coordinating work among programmers.
 
-## GIT
+## Git
 
 ### Installation
 
-- **VCS:** Version Control System
-
-## Kinds of VCS
+## VCS
 
 ### Local
 
