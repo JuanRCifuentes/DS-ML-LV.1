@@ -28,7 +28,7 @@ There are three roles in SCRUM:
    3. **Development Team:** Developers carry out all work required to build increments of value every sprint.
 
 ## Goals
-
+These are high prioritize tasks for team to do!!!
 - **backlog:**
 Tasks you can choose to do them
 - **Workflow:**
