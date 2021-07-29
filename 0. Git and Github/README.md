@@ -44,7 +44,6 @@
   - [Fetch and Pull](#fetch-and-pull)
   - [Issues and Pull-Request](#issues-and-pull-request)
   - [Other commands](#other-commands)
-    - [Deleting a tag on remote repo](#deleting-a-tag-on-remote-repo)
 - [References](#references)
 
 # Git
@@ -110,6 +109,10 @@ git config --global color.ui true
 ```bash
 git config --global alias.superlog "log --graph --abbrev-commit --date=relative --all --format=format:'%C(bold blue)%h%C(reset) %C(auto,magenta)%G? %C(bold green)(%>(18,trunc)%aD)%C(reset) %C(bold blue)[%<(10,trunc)%aN]%Creset - %s%C(reset) %C(bold yellow)%d%C(reset)'"
 ```
+- To set an additional alias write the commands inside quotes as in the example below
+```bash
+git config --global alias.ALIAS_NAME "commands_in_alias"
+```
 - Set the default text editor for global or local (replacing `global` with `local`) use. Replace `code` with `atom` to use Atom, `subl` to use Sublime Text, etc.
 ```bash
 git config --global core.editor “code —wait”
@@ -155,7 +158,15 @@ cat FILE_NAME.EXTENSION
 ```
 
 ### VIM
-- If it starts with `#`, it is a comment
+VIM is the test editor of the terminal. To use it just type `vim` and then the file you want to open/edit.
+
+Comment with `#`
+
+To quit:
+1. `esc` key
+   - `:wq` To Write & quit
+   - `:q!` To just quit
+On windows:
 - To quit, esc + shift + z + z (CMD and Terminal course :D)
 
 ## Git Stages
@@ -176,6 +187,11 @@ To create a git repository, while located in the proyect folder, type
 git init
 ```
 It creates a hidden folder called `.git`, you can check that with the comand `ls -al`
+
+To download a repository from an online service such as GitHub, there is the command `clone`
+```bash
+git clone REPOSITORY_LINK
+```
 
 ### Check Status
 ```bash
@@ -263,6 +279,10 @@ git tag --list              # Lists all tags
 git tag -l                  # Same as above
 git tag -l "v1.8*"          # Lists all tags containing "v1.8"
 ```
+To detele a tag in a remote repo, we gotta `push` the changes (more about `push` command in the GitHub section)
+```bash
+git push -delete origin TAG_NAME
+```
 
 ### Git Show and Diff
 The `show` command generates a `diff` command between the last commit and the one before that. To use `diff`, we have to compare 2 different commits, using their SHA identifiers.
@@ -276,6 +296,7 @@ git diff SHA_1 SHA_2
 ### Git Reset
 This allows us to go back to a specified version. It can be:
 - **HARD:** Everything goes back
+- **MIXED:** Discards the indicated commit, also removing those changes from staging area
 - **SOFT:** We go back to an earlier verison, except for the staging area
 ```bash
 git reset --hard SHA
@@ -298,18 +319,20 @@ A branch represents an independent line of development. New commits are recorded
 
 ```bash
 git branch                # Lists all branches in repo
+git branch -l
 git branch BRANCH_NAME    # Creates a new branch called BRANCH_NAME
 git branch -d BRANCH      # Deletes the specified branch
 git branch -D BRANCH      # Forse deletes a branch. Permanently throws away all commits associated with a branch
 git push origin --delete BRANCH   # Deletes a remote branch. If we just delete, a remote repo may still have the locally deleted branch.
 git branch -m BRANCH1     # Renames the current branch
+git branch -m OLD_NAME NEW_NAME
 git branch -a             # List all remote branches
 ```
 
 ### Git Merge
 It is used to combine branches, usually with the master branch
 ```bash
-git merge 
+git merge BRANCH_NAME   # Merges a specific branch with current branch
 ```
 
 ## Advanced Git Commands
@@ -321,10 +344,18 @@ git merge
 ### Cherry Pick
 
 ## Git-Ignore
+Create a hidden file calles `.gitignore`. Inside that file, every filename listed, means that file is gonna be ignored by git from now on. You can also ignore files with certain extension or even entire folders.
+```bash
+FOLDER_NAME/*       # Ignores every file inside a folder
+*.code-workspace    # Ignores every file with an specific extension
+``` 
 
 ## What is a VCS?
-This is explained in the [Git Book](https://git-scm.com/book/en), section "1.1 About Version Control" (pag. 8)
+Register changes on a file or a set of files. It could work as a ctrl+z. You can "go back in time" but you have to save every change in order to do that.
 
+This is better explained in the [Git Book](https://git-scm.com/book/en), section "1.1 About Version Control" (pag. 8)
+
+With local and centralized systems, there's only one copy of the repository, so if that gets compromised... gg
 ### Local
 
 <p align="center">
@@ -345,9 +376,17 @@ This is explained in the [Git Book](https://git-scm.com/book/en), section "1.1 A
 
 # GitHub
 
+- Repository hosting
+- Programmers social network
+- Tasks and proyects can be managed from it
+
 ## Remote Repositories
 
 ## Generating a key
+```bash
+ssh-keygen -t rsa -b 4096 -C "email@domain.com"
+cat ~/.ssh/id_rsa.pub | clip
+```
 
 ## Push
 
@@ -358,10 +397,9 @@ This is explained in the [Git Book](https://git-scm.com/book/en), section "1.1 A
 ## Issues and Pull-Request
 
 ## Other commands
-
-### Deleting a tag on remote repo
+- Submodules: Are basically a repository inside a repository. You have to locate in the location you want the small repository to be in and type:
 ```bash
-git push -delete origin TAG_NAME
+git submodule add REPO_LINK
 ```
 
 # References
