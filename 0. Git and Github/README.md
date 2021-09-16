@@ -17,7 +17,7 @@
     - [VIM](#vim)
   - [Git Stages](#git-stages)
   - [Git Commands](#git-commands)
-    - [Create a Git repository](#create-a-git-repository)
+    - [Create a Git repo](#create-a-git-repo)
     - [Check Status](#check-status)
     - [Add, Restore, rm and Commit](#add-restore-rm-and-commit)
     - [Git Log](#git-log)
@@ -170,7 +170,7 @@ cat FILE_NAME.EXTENSION
 
 ## Git Commands
 
-### Create a Git repository
+### Create a Git repo
 To create a git repository, while located in the proyect folder, type
 ```bash
 git init
@@ -367,4 +367,4 @@ git push -delete origin TAG_NAME
 # References
 1. Platzi 
 2. Wikipedia
-3. Git Book [Link](https://git-scm.com/book/en)
+3. Git Official Book [Link](https://git-scm.com/book/en)
