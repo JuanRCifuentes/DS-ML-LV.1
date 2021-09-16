@@ -17,7 +17,7 @@
     - [VIM](#vim)
   - [Git Stages](#git-stages)
   - [Git Commands](#git-commands)
-    - [Create a Git repository](#create-a-git-repository)
+    - [Create a Git repo](#create-a-git-repo)
     - [Check Status](#check-status)
     - [Add, Restore, rm and Commit](#add-restore-rm-and-commit)
     - [Git Log](#git-log)
@@ -181,7 +181,7 @@ On windows:
 
 ## Git Commands
 
-### Create a Git repository
+### Create a Git repo
 To create a git repository, while located in the proyect folder, type
 ```bash
 git init
@@ -407,3 +407,4 @@ git submodule add REPO_LINK
 2. Wikipedia
 3. Git Book [Link](https://git-scm.com/book/en)
 4. Git Tower [Link](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101/)
+5. Git Official Book [Link](https://git-scm.com/book/en)
