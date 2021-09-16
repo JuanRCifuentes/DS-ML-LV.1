@@ -406,3 +406,4 @@ git submodule add REPO_LINK
 1. Platzi 
 2. Wikipedia
 3. Git Book [Link](https://git-scm.com/book/en)
+4. Git Tower [Link](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101/)
