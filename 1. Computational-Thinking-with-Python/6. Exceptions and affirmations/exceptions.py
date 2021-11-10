@@ -9,3 +9,5 @@ list_1 = list(range(10))
 number = 0
 
 print(divide_elementos_de_lista(list_1, number))
+
+# raise !

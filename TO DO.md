@@ -1,0 +1,1 @@
+- Complete `Exceptions/raise` section in `1. Computational-Thinking-with-Python/6. Exceptions and affirmations/README.md`

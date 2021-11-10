@@ -29,4 +29,4 @@ print(f(5))
 print(f(1000))
 print(f(10000))
 # print(f(100000)) #Ya estaba tardando más de 10 minutos
-# print(f(1000000)) #Habría tardado casi un día extrapolando el tiempo que tomó con 10k
+# print(f(1000000)) #Habría tardado casi un día, extrapolando el tiempo que tomó con 10k
