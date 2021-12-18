@@ -2,9 +2,9 @@ import time
 
 def timer(funct):
     def wrapper_function(*Args, **Kwargs):
-        time0 = time.time()
+        time0 = time.perf_counter()
         funct(*Args, **Kwargs)
-        print(f'La función {funct.__name__} demoró {time.time() - time0} en correr')
+        print(f'La función {funct.__name__} demoró {time.perf_counter() - time0} en correr')
     return wrapper_function
 
 class Decorador_Class(object):

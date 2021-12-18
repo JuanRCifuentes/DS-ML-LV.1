@@ -166,7 +166,7 @@ To quit:
 1. `esc` key
    - `:wq` To Write & quit
    - `:q!` To just quit
-On windows:
+   On windows:
 - To quit, esc + shift + z + z (CMD and Terminal course :D)
 
 ## Git Stages
@@ -348,7 +348,7 @@ Create a hidden file calles `.gitignore`. Inside that file, every filename liste
 ```bash
 FOLDER_NAME/*       # Ignores every file inside a folder
 *.code-workspace    # Ignores every file with an specific extension
-``` 
+```
 
 ## What is a VCS?
 Register changes on a file or a set of files. It could work as a ctrl+z. You can "go back in time" but you have to save every change in order to do that.
@@ -373,7 +373,6 @@ With local and centralized systems, there's only one copy of the repository, so 
 <p align="center">
   <img src="Images/VCS_distributed.png" alt="drawing" width="300"/>
 </p>
-
 # GitHub
 
 - Repository hosting
@@ -382,7 +381,17 @@ With local and centralized systems, there's only one copy of the repository, so 
 
 ## Remote Repositories
 
+>  "Remote repositories are versions of your project that are hosted on the Internet or network somewhere" - [git-scm](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
+
+To get the url or more information of the remote repository linked... [Stack overflow question](https://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repository-was-originally-cloned-fr).
+
+- `git config --get remote.origin.url`
+- `git ls-remote --get-url`
+- `git remote -v`
+- `git remote show origin`
+
 ## Generating a key
+
 ```bash
 ssh-keygen -t rsa -b 4096 -C "email@domain.com"
 cat ~/.ssh/id_rsa.pub | clip
@@ -395,6 +404,40 @@ cat ~/.ssh/id_rsa.pub | clip
 ## Fetch and Pull
 
 ## Issues and Pull-Request
+
+## Upstream and Downstream
+
+## Update a forked remote repository
+
+When you fork a Github repository and that repo gets updated, you need to set the original repository as the upstream repo, fetch from that repo and then force push if you have any changes different from the original repo.
+
+**Step 1:** Add the remote (original repo that you forked) and call it “upstream”
+
+> ```shell
+> git remote add upstream https://github.com/original-repo/goes-here.git
+> ```
+
+**Step 2:** Fetch all branches of remote upstream
+
+> ```shell
+> *git fetch upstream*
+> ```
+
+**Step 3:** Rewrite your master with upstream’s master using git rebase.
+
+> ```shell
+> *git rebase upstream/master*
+> ```
+
+**Step 4:** Push your updates to master. You may need to force the push with “`*--force*`”.
+
+> ```shell
+> *git push origin master --force*
+> ```
+
+[Medium Article
+
+[](https://medium.com/@topspinj/how-to-git-rebase-into-a-forked-repo-c9f05e821c8a).
 
 ## Other commands
 - Submodules: Are basically a repository inside a repository. You have to locate in the location you want the small repository to be in and type:
